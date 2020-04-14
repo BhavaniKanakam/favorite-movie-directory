@@ -2,7 +2,7 @@ import React from "react";
 import { ListCreation } from "./ListCreation";
 
 const ListForm = (props) => {
-  const { state, dispatch } = React.useContext(ListCreation);
+  const { dispatch } = React.useContext(ListCreation);
 
   const [movie, setMovie] = React.useState("");
   const [rating, setRating] = React.useState("");

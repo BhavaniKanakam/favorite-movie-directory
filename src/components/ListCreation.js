@@ -5,11 +5,7 @@ import ListForm from "./ListForm";
 export const SongContext = React.createContext();
 
 const initialState = {
-  list: [],
-  isFetching: false,
-  hasError: false,
-  isSongSubmitting: false,
-  songHasError: false,
+  list: []
 };
 
 const reducer = (state, action) => {
