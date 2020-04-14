@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import ListCreation from "./components/ListCreation";
 
-class App extends Component {
-  render () {
-    return (
-      <div>
-        HackerRank React Quiz
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App"><ListCreation /></div>
+  );
 }
 
 export default App;

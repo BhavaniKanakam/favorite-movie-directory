@@ -6,11 +6,11 @@
     "cross-env": "5.2.0",
     "jest-dom": "2.1.0",
     "jest-junit-reporter": "^1.1.0",
-    "react-dom": "16.5.2",
-    "react-scripts": "2.0.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1",
     "react-test-renderer": "16.5.2",
-    "react-testing-library": "5.2.0",
-    "react": "16.5.2"
+    "react-testing-library": "5.2.0"
   },
   "scripts": {
     "prestart": "npm install",
