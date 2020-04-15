@@ -1,8 +1,8 @@
 import React from "react";
-import { ListCreation } from "./ListCreation";
+import { ListContext } from "./ListCreation";
 
 const ListForm = (props) => {
-  const { dispatch } = React.useContext(ListCreation);
+  const { dispatch } = React.useContext(ListContext);
 
   const [movie, setMovie] = React.useState("");
   const [rating, setRating] = React.useState("");
@@ -25,30 +25,30 @@ const ListForm = (props) => {
        <form className="modal-form">
                 <div className="modal-form-inputs">
 
-                <label htmlFor="title">Movie Name</label>
+                <label htmlFor="name-input">Movie Name</label>
                     <input
-                    id="naame-input"
-                    name="Movie-name"
+                    id="name-input"
+                    name="name-input"
                     type="text"
                     value={movie}
                     onChange={e => setMovie(e.target.value)}
                     className="text-input"
                     />
 
-                <label htmlFor="artist">Rating</label>
+                <label htmlFor="ratings-input">Rating</label>
                     <input
                     id="ratings-input"
-                    name="artist"
+                    name="ratings-input"
                     type="text"
                     value={rating}
                     onChange={e => setRating(e.target.value)}
                     className="text-input"
                     />
 
-                <label htmlFor="imageUrl">Duration</label>
+                <label htmlFor="durtaion-input">Duration</label>
                     <input
                     id="durtaion-input"
-                    name="Duration"
+                    name="durtaion-input"
                     type="text"
                     value={duration}
                     onChange={e => setDuration(e.target.value)}

@@ -2,10 +2,12 @@ import React from "react";
 import ListDetails from "./ListDetails";
 import ListForm from "./ListForm";
 
-export const SongContext = React.createContext();
+export const ListContext = React.createContext();
 
 const initialState = {
-  list: []
+  list: [],
+  searchList: [],
+  search: false
 };
 
 const reducer = (state, action) => {
@@ -30,20 +32,20 @@ const reducer = (state, action) => {
 export const ListCreation = () => {
   const [state, dispatch] = React.useReducer(reducer, initialState);
   const [search, setSearch] = React.useState("");
-  const data = state.search ? state.searchList : state.List;
+  const data = state.search ? state.searchList : state.list;
 
   return (
     <React.Fragment>
-    <SongContext.Provider value={{
+    <ListContext.Provider value={{
       state,
       dispatch
     }}>
       <ListForm />
-    </SongContext.Provider>
+    </ListContext.Provider>
     <div className="home">
     <input
           onChange={e => {
-            const test = state.songs.filter(team => {
+            const test = state.list.filter(team => {
               return team.movie.toLowerCase().includes(e.target.value.toLowerCase());
             });
             setSearch(e.target.value);
@@ -57,10 +59,10 @@ export const ListCreation = () => {
           type="text"
           value={search}
       />
-    {data.length > 0 &&
-            data.map(list => (
-              <ListDetails key={list.rating.toString()} list={list} />
-            ))}
+      {data.length > 0 &&
+        data.map(list => (
+          <ListDetails key={list.rating.toString()} list={list} />
+        ))}
     </div>
     </React.Fragment>
   );

@@ -3,13 +3,18 @@ import React from "react";
 export const ListDetails = ({ list }) => {
     
   return (
-    <ul>
-      <li>
-        <h2>{list.movie}</h2>
-        <p>{list.rating}</p>
-        <p>{list.duration}</p>
-      </li>
-    </ul>
+    <table id="directory-table">
+      <thead>
+        <th>Movie</th>
+        <th>Rating</th>
+        <th>Duration</th>
+      </thead>
+      <tr>
+        <td>{list.movie}</td>
+        <td>{list.rating}</td>
+        <td>{list.duration}</td>
+      </tr>
+    </table>
   );
 };
 
