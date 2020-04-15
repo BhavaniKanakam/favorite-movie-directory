@@ -13,7 +13,6 @@
     "react-testing-library": "5.2.0"
   },
   "scripts": {
-    "prestart": "npm install",
     "start": "cross-env PORT=8000 react-scripts start",
     "build": "react-scripts build",
     "pretest": "npm install",

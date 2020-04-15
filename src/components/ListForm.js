@@ -16,7 +16,7 @@ const ListForm = (props) => {
         "duration": duration
       };
       dispatch({
-        type: "ADD_SONG_SUCCESS",
+        type: "ADD_LIST_SUCCESS",
         payload: data
     })
   }
